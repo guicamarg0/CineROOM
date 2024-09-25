@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineROOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logofavicon.png" type="image/x-icon">
+    <body>
+    <nav class="header">
+        <ul class="cabecalho">
+            <li class="logo">
+                <img src="CineROOMLogobranca.png" alt="">
+            </li>
+            <li class="links">
+                <a href="index.html" class="link1">Inicio</a>
+                <div class="drop">
+                    <a href="#" class="link2">Categorias</a>
+                    <ul class="dropMenu">
+                        <li class="dropItem"><a href="#" onclick="filterByCategory('acao')">Ação</a></li>
+                        <li class="dropItem"><a href="#" onclick="filterByCategory('romance')">Romance</a></li>
+                        <li class="dropItem"><a href="#" onclick="filterByCategory('ficcao')">Ficção Científica</a></li>
+                        <li class="dropItem"><a href="#" onclick="filterByCategory('terror')">Terror</a></li>
+                        <li class="dropItem"><a href="#" onclick="filterByCategory('aventura')">Aventura</a></li>
+                        
+
+                    </ul>
+                </div>
+                <a href="sobre.html" class="link3">Sobre</a>
+            </li>
+        </ul>
+        
+    </nav>
+    <div class="content">
+        <div class="pesquisa">
+            <input type="text" name="navForm"class="navForm" id="idNavForm" placeholder="Search..." onkeyup="search()">
+            
+        </div>
+        <!-- Mensagem para nenhum filme encontrado -->
+        <div id="noResultsMessage" style="display: none;">
+            <h3>Nenhum filme encontrado.</h3>
+        </div>
+        <!-- Lista de filmes -->
+        <div class="contentFilmes">
+            <ul class="filmeContainer" data-category="romance">
+                <li class="fotoFilme"><img class="fotoCartaz" src="meu primeiro amor.png" alt=""></li>
+                <li class="nomeFilme"><h3>Meu primeiro Amor</h3></li>
+                <li class="btnFilme"><a href="meuprimeiroamor.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer"data-category="romance">
+                <li class="fotoFilme"><img class="fotoCartaz" src="Titanic.png" alt=""></li>
+                <li class="nomeFilme"><h3>Titanic</h3></li>
+                <li class="btnFilme"><a href="titanic.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer"data-category="acao,ficcao">
+                <li class="fotoFilme"><img class="fotoCartaz" src="exterminador.png" alt=""></li>
+                <li class="nomeFilme"><h3>Exterminador</h3></li>
+                <li class="btnFilme"><a href="exterminaodrdofuturo.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer" data-category="acao,ficcao">
+                <li class="fotoFilme"><img class="fotoCartaz" src="de volta pro futuro I.png" alt=""></li>
+                <li class="nomeFilme"><h3>De volta pro futuro</h3></li>
+                <li class="btnFilme"><a href="devoltaprofuturo1.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer" data-category="acao,ficcao">
+                <li class="fotoFilme"><img class="fotoCartaz" src="De volta pro futuro II.png" alt=""></li>
+                <li class="nomeFilme"><h3>De volta pro futuro II</h3></li>
+                <li class="btnFilme"><a href="devoltaprofuturo2.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer" data-category="acao,ficcao">
+                <li class="fotoFilme"><img class="fotoCartaz" src="De volta pro futuro III.png" alt=""></li>
+                <li class="nomeFilme"><h3>De volta pro futuro III</h3></li>
+                <li class="btnFilme"><a href="devoltaprofuturo3.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer" data-category="acao,aventura">
+                <li class="fotoFilme"><img class="fotoCartaz" src="Indiana Jones.png" alt=""></li>
+                <li class="nomeFilme"><h3>Indiana Jones</h3></li>
+                <li class="btnFilme"><a href="indianajones.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer"data-category="romance">
+                <li class="fotoFilme"><img class="fotoCartaz" src="uma linda mulher.png" alt=""></li>
+                <li class="nomeFilme"><h3>Uma linda mulher</h3></li>
+                <li class="btnFilme"><a href="umalindamulher.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer" data-category="terror">
+                <li class="fotoFilme"><img class="fotoCartaz" src="a hora do pesadelo.png" alt=""></li>
+                <li class="nomeFilme"><h3>A hora do pesadelo</h3></li>
+                <li class="btnFilme"><a href="ahoradopesadelo.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            <ul class="filmeContainer"data-category="terror">
+                <li class="fotoFilme"><img class="fotoCartaz" src="sexta feira 13.png" alt=""></li>
+                <li class="nomeFilme"><h3>Sexta-feira 13</h3></li>
+                <li class="btnFilme"><a href="sextafeira13.html" class="btnVerMais">Ver Mais</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    </div>
+    <!-- Rodapé com as informações do desenvolvedor -->
+    <footer class="rodape">
+        <img class="imgFooter"src="CineROOMLogobranca.png" alt="">
+        <h4>Direitos autorais-3DAM1(2024)-CEEP CURITIBA©</h5>
+        <h6>Guilherme Camargo</h6>
+        <h6>Jamily Notário</h6>
+        <h6>Otávio Lorenzo</h6>
+        <h6>Ian Gabriel</h6>
+
+    </footer>
+    <script src="main.js"></script>
+</body>

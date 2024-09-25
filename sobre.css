@@ -1,0 +1,139 @@
+/*PARTE INIICAL DO SITE*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, conteúdo e footer */
+    height: 100vh; /* Faz com que a altura total da página seja a altura da viewport */
+}
+/* Header*/
+.header{
+    background-color: #000000;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    
+}
+.header li{
+    list-style-type: none;
+}
+.header img{
+    width: 300px;
+}
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin: 0;
+}
+.links{
+    display: flex;
+}
+.links a{
+    margin-right:50px;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 20px;
+}
+.pesquisa{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+.navForm{
+    width: 85rem;
+    height: 40px;
+    border-radius: 5rem;
+    padding: 10px;
+    
+}
+.drop {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropMenu {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    margin: 0;
+  }
+  
+  .dropItem a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropItem:hover{
+    background-color: #ff3131;
+    transition: .4s;
+}
+  
+  .drop:hover .dropMenu {
+    display: block;
+  }
+
+.content{
+    background-color: #181717;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 5%;
+}
+
+.text{
+    text-align: center;
+    width: 60%;
+}
+.text h3,h2,h4,p,li{
+    list-style: none;
+    margin: 1% 0 1%;
+}
+
+  /*RODAPE*/
+  footer{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: #000000;
+    font-size: x-large;
+    text-align: center;
+
+}
+.imgFooter{
+    width: 15%;
+    margin-bottom: 1%;
+}
+@media (max-width: 768px) {
+    .header img{
+        width: 150px;
+    }
+    .cabecalho{
+        justify-content: space-around;
+    }
+    .links a{
+        font-size: 15px;
+        margin-right: 25px;
+    }
+    .imgFooter{
+        width: 150px;
+    }
+    footer{
+        font-size: large;
+        height: 200px;
+        text-align: center;
+    }    
+    
+    
+}
